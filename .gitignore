@@ -2,3 +2,7 @@
 /exercicioContaBancaria/production/
 *.iml
 /exercicioFixacaoEnum/.idea/
+/exercicioEnumComposicao/src/.idea/.gitignore
+/exercicioEnumComposicao/src/.idea/misc.xml
+/exercicioEnumComposicao/src/.idea/modules.xml
+/exercicioEnumComposicao/src/.idea/vcs.xml
