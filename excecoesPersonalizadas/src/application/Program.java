@@ -1,6 +1,7 @@
 package application;
 
 import model.entities.Reservation;
+import model.exceptions.DomainException;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -34,8 +35,10 @@ public class Program {
             System.out.println("Reservation: " + reservation);
         } catch (DateTimeParseException e){
             System.out.println("Invalid date format");
-        } catch (IllegalArgumentException e){
+        } catch (DomainException e){
             System.out.println("Error in reservation: " + e.getMessage());
+        } catch (RuntimeException e){
+            System.out.println("Unexpected error");
         }
         scanner.close();
     }
