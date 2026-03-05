@@ -23,7 +23,7 @@ public class Program {
             }
         } */
 
-        String path = "/home/leonardo/Java/cursoJava/Arquivos/in.txt";
+        /* String path = "/home/leonardo/Java/cursoJava/Arquivos/in.txt";
         BufferedReader br = null;
         FileReader fr = null;
         try {
@@ -45,6 +45,20 @@ public class Program {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
+
+        String path = "/home/leonardo/Java/cursoJava/Arquivos/in.txt";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String line = br.readLine();
+
+            while (line != null) {
+                System.out.println(line);
+                line = br.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        } 
+
     }
 }
