@@ -27,6 +27,10 @@ public class Folders {
         boolean succes = new File(strPath + "/subdir").mkdir();
         System.out.println("\nDirectory created successfully: " + succes);
 
+        System.out.println("getPath: " + path.getPath());
+        System.out.println("getParent: " + path.getParent());
+        System.out.println("getName: " + path.getName());
+
         scanner.close();
     }
 }
